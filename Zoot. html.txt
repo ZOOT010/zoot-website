@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$ZOOT Token</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to bottom right, #6b21a8, #fb923c);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+    .logo {
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+    }
+    .coin-img {
+      width: 100px;
+      height: 100px;
+      margin-top: 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      padding: 2rem;
+      border-radius: 2rem;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    .buy-button {
+      background-color: #ec4899;
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+    }
+    .buy-button:hover {
+      background-color: #f472b6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to $ZOOT</h1>
+  <div class="card">
+    <img src="zootedtoken-logo.png" alt="$ZOOT Logo" class="logo" />
+    <p>
+      $ZOOT — the official currency of being way too online and just zooted enough to ape.<br>
+      Born on Solana. Fueled by vibes. Pumping because... why not?
+    </p>
+    <a href="https://pump.fun" target="_blank">
+      <button class="buy-button">Buy on Pump.fun</button>
+    </a>
+    <img src="zootedtoken-coin.png" alt="$ZOOT Coin" class="coin-img" />
+  </div>
+</body>
+</html>
