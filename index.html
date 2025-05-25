@@ -9,7 +9,8 @@
     body {
       margin: 0;
       font-family: 'Rubik', sans-serif;
-      background: linear-gradient(to bottom right, #6b21a8, #fb923c);
+      background: url('zootedtoken-coin.png') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       display: flex;
       flex-direction: column;
@@ -53,7 +54,7 @@
       100% { transform: translateY(0px); }
     }
     .card {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(8px);
       padding: 2rem;
       border-radius: 2rem;
@@ -85,11 +86,29 @@
       background-color: #f472b6;
       transform: scale(1.05);
     }
+    .social-links {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .social-links a {
+      color: #fcd34d;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: white;
+    }
     .roadmap {
       margin-top: 2rem;
       max-width: 700px;
       animation: fadeInSlide 2.5s ease forwards;
       opacity: 0;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 1rem;
     }
     .roadmap h2 {
       font-size: 1.8rem;
@@ -137,9 +156,12 @@
       Contract Address:<br>
       <strong>qUGtg2XxNvvKUTjuByQhcewqeWKuwrpJLtBDLdTpump</strong>
     </div>
-    <a href="https://pump.fun" target="_blank">
+    <a href="https://pump.fun/coin/qUGtg2XxNvvKUTjuByQhcewqeWKuwrpJLtBDLdTpump" target="_blank">
       <button class="buy-button">Buy on Pump.fun</button>
     </a>
+    <div class="social-links">
+      <a href="https://x.com/kalaifc" target="_blank">Follow on X</a>
+    </div>
     <img src="zootedtoken-coin.png" alt="$ZOOT Coin" class="coin-img" />
   </div>
 
