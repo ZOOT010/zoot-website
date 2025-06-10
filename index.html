@@ -3,198 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$ZOOT Token</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <title>$ZOOT | Meme Coin Revolution</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Rubik', sans-serif;
-      background: url('zootedtoken-logo.png') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-      text-align: center;
-      overflow-x: hidden;
+    .glow-button {
+      animation: pulse 2s infinite;
+      box-shadow: 0 0 10px #fff, 0 0 20px #f0f, 0 0 30px #f0f;
     }
-    h1 {
-      animation: fadeInSlide 2s ease-out forwards;
-      opacity: 0;
-    }
-    @keyframes fadeInSlide {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .logo {
-      border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      margin-bottom: 1.5rem;
-      animation: zoomIn 1.5s ease forwards;
-    }
-    @keyframes zoomIn {
-      0% { transform: scale(0.5); opacity: 0; }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
       100% { transform: scale(1); opacity: 1; }
     }
-    .coin-img {
-      width: 100px;
-      height: 100px;
-      margin-top: 1rem;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
-    }
-    .card {
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(8px);
-      padding: 2rem;
-      border-radius: 2rem;
-      max-width: 500px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      margin-bottom: 2rem;
-      transform: translateY(30px);
-      opacity: 0;
-      animation: slideUpFade 1.5s ease forwards 1s;
-    }
-    @keyframes slideUpFade {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-    .buy-button {
-      background-color: #ec4899;
-      border: none;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
+    .openai-badge {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #111827;
+      border: 1px solid #4b5563;
+      color: #fff;
+      padding: 10px 16px;
       border-radius: 9999px;
-      cursor: pointer;
-      margin-top: 1.5rem;
-      transition: transform 0.2s, background-color 0.3s;
+      font-size: 14px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+      transition: background 0.3s;
     }
-    .buy-button:hover {
-      background-color: #f472b6;
-      transform: scale(1.05);
-    }
-    .social-links {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .social-links a {
-      color: #fcd34d;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    .social-links a:hover {
-      color: white;
-    }
-    .roadmap {
-      margin-top: 2rem;
-      max-width: 700px;
-      animation: fadeInSlide 2.5s ease forwards;
-      opacity: 0;
-    }
-    .roadmap h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    .roadmap ul {
-      list-style: none;
-      padding: 0;
-    }
-    .roadmap li {
-      background: rgba(0, 0, 0, 0.6);
-      margin-bottom: 0.75rem;
-      padding: 1rem;
-      border-radius: 1rem;
-      animation: fadeIn 0.6s ease forwards;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .contract {
-      margin-top: 1.5rem;
-      font-size: 0.9rem;
-      word-break: break-word;
-      color: #fcd34d;
-    }
-    .banner-img {
-      max-width: 90%;
-      border-radius: 1rem;
-      margin-top: 2rem;
-      animation: fadeInSlide 3s ease forwards;
-      opacity: 0;
-    }
-    .meme-gallery {
-      margin-top: 3rem;
-      max-width: 800px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      animation: fadeInSlide 3s ease forwards;
-    }
-    .meme-gallery img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    .openai-badge:hover {
+      background: #1f2937;
     }
   </style>
 </head>
-<body>
-  <h1>Welcome to $ZOOT</h1>
-  <div class="card">
-    <img src="zootedtoken-logo.png" alt="$ZOOT Logo" class="logo" />
-    <p>
-      $ZOOT — the official currency of being way too online and just zooted enough to ape.<br>
-      Born on Solana. Fueled by vibes. Pumping because... why not?
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-gradient-to-b from-yellow-400 to-pink-500">
+    <h1 class="text-5xl font-bold mb-4 animate-bounce">Welcome to $ZOOT</h1>
+    <p class="text-xl mb-6">The Meme Coin You Didn't Know You Needed</p>
+    <div class="space-x-4">
+      <a href="https://pump.fun/coin/qUGtg2XxNvvKUTjuByQhcewqeWKuwrpJLtBDLdTpump" target="_blank" class="glow-button bg-black text-white py-3 px-6 rounded-full font-semibold hover:bg-gray-800">
+        <i class="fas fa-rocket mr-2"></i>Buy Now
+      </a>
+      <a href="#community" class="bg-white text-black py-3 px-6 rounded-full font-semibold hover:bg-gray-200">Join Telegram</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 px-6 text-center bg-gray-800">
+    <h2 class="text-3xl font-bold mb-4">What is $ZOOT?</h2>
+    <p class="text-lg max-w-3xl mx-auto">
+      $ZOOT is a wild, community-powered meme coin built on Solana — made for degens, by degens. Fast, funny, and full of potential.
     </p>
-    <div class="contract">
-      Contract Address:<br>
-      <strong>qUGtg2XxNvvKUTjuByQhcewqeWKuwrpJLtBDLdTpump</strong>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="py-16 px-6 bg-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-12">🚀 Roadmap</h2>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div class="p-6 bg-gray-800 rounded-xl shadow-xl">
+        <h3 class="text-xl font-bold mb-2">Phase 1</h3>
+        <p>Launch $ZOOT on Solana. Meme storm on Twitter. First 500 holders.</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-xl shadow-xl">
+        <h3 class="text-xl font-bold mb-2">Phase 2</h3>
+        <p>Telegram growth. NFT giveaways. Listings on Solana trackers.</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-xl shadow-xl">
+        <h3 class="text-xl font-bold mb-2">Phase 3</h3>
+        <p>ZOOTverse preview. Merch drop. 5K+ strong community.</p>
+      </div>
     </div>
-    <a href="https://pump.fun/coin/qUGtg2XxNvvKUTjuByQhcewqeWKuwrpJLtBDLdTpump" target="_blank">
-      <button class="buy-button">Buy on Pump.fun</button>
+  </section>
+
+  <!-- Community Section -->
+  <section id="community" class="py-16 px-6 bg-gray-800 text-center">
+    <h2 class="text-3xl font-bold mb-4">💬 Join the $ZOOT Community</h2>
+    <p class="mb-6">Stay up to date, share memes, and ride the rocket with fellow $ZOOTers.</p>
+    <a href="https://t.me/zootcoin" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-full font-bold">
+      <i class="fab fa-telegram mr-2"></i>Join Telegram
     </a>
-    <div class="social-links">
-      <a href="https://x.com/kalaifc" target="_blank">Follow on X</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-10 text-center border-t border-gray-700">
+    <p>&copy; 2025 $ZOOT Coin. All rights reserved.</p>
+    <div class="mt-4 space-x-4">
+      <a href="#" class="text-yellow-400 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-yellow-400 hover:text-yellow-500"><i class="fab fa-discord"></i></a>
+      <a href="#" class="text-yellow-400 hover:text-yellow-500"><i class="fab fa-telegram"></i></a>
     </div>
-    <img src="zootedtoken-coin.png" alt="$ZOOT Coin" class="coin-img" />
-  </div>
+    <p class="mt-6 text-sm text-gray-500">Built with 💡 and ❤️ thanks to <a href="https://openai.com/chatgpt" target="_blank" class="underline hover:text-white">ChatGPT</a> & <a href="https://openai.com" target="_blank" class="underline hover:text-white">OpenAI</a>.</p>
+  </footer>
 
-  <img src="zootedtoken-banner.png" alt="ZOOT Banner" class="banner-img" />
+  <!-- OpenAI Badge -->
+  <a href="https://openai.com/chatgpt" target="_blank" class="openai-badge">💬 Powered by ChatGPT</a>
 
-  <div class="roadmap">
-    <h2>Roadmap</h2>
-    <ul>
-      <li>🚀 Launch on Pump.fun</li>
-      <li>📢 Viral Marketing Campaign & Memes</li>
-      <li>🤝 Community Contests & Giveaways</li>
-      <li>🛠 Website + DApp Launch</li>
-      <li>📈 Listings on Raydium & Jupiter</li>
-      <li>🌌 ZOOT Metaverse Sneak Peek</li>
-    </ul>
-  </div>
-
-  <div class="meme-gallery">
-    <h2>ZOOT Memes</h2>
-    <img src="A_digital_illustration_in_cartoon_and_crypto_meme_.png" alt="Zoot Meme" />
-  </div>
 </body>
 </html>
