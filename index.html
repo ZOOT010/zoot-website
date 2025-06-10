@@ -16,6 +16,18 @@
       50% { transform: scale(1.05); opacity: 0.9; }
       100% { transform: scale(1); opacity: 1; }
     }
+    .meme-float {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 100px;
+      animation: floaty 4s ease-in-out infinite;
+      z-index: 10;
+    }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
     .openai-badge {
       position: fixed;
       bottom: 20px;
@@ -36,15 +48,18 @@
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
+  <!-- Floating Meme Image -->
+  <img src="https://i.imgflip.com/7zqrc1.jpg" alt="ZOOT Meme" class="meme-float rounded-full border-4 border-yellow-300 shadow-xl">
+
   <!-- Hero Section -->
-  <section class="text-center py-20 bg-gradient-to-b from-yellow-400 to-pink-500">
+  <section class="text-center py-20 bg-gradient-to-b from-yellow-400 to-pink-500 relative overflow-hidden">
     <h1 class="text-5xl font-bold mb-4 animate-bounce">Welcome to $ZOOT</h1>
     <p class="text-xl mb-6">The Meme Coin You Didn't Know You Needed</p>
     <div class="space-x-4">
       <a href="https://pump.fun/coin/qUGtg2XxNvvKUTjuByQhcewqeWKuwrpJLtBDLdTpump" target="_blank" class="glow-button bg-black text-white py-3 px-6 rounded-full font-semibold hover:bg-gray-800">
         <i class="fas fa-rocket mr-2"></i>Buy Now
       </a>
-      <a href="#community" class="bg-white text-black py-3 px-6 rounded-full font-semibold hover:bg-gray-200">Join Telegram</a>
+      <a href="#community" class="bg-white text-black py-3 px-6 rounded-full font-semibold hover:bg-gray-200">Join X</a>
     </div>
   </section>
 
@@ -79,9 +94,8 @@
   <section id="community" class="py-16 px-6 bg-gray-800 text-center">
     <h2 class="text-3xl font-bold mb-4">💬 Join the $ZOOT Community</h2>
     <p class="mb-6">Stay up to date, share memes, and ride the rocket with fellow $ZOOTers.</p>
-    <a href="https://t.me/zootcoin" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-full font-bold">
-      <i class="fab fa-telegram mr-2"></i>Join Telegram
-    </a>
+    <a href="https://x.com/kalaifc" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-full font-bold">
+      <i class="fab fa-x-twitter mr-2"></i>Join X</a>
   </section>
 
   <!-- Footer -->
@@ -90,7 +104,7 @@
     <div class="mt-4 space-x-4">
       <a href="#" class="text-yellow-400 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
       <a href="#" class="text-yellow-400 hover:text-yellow-500"><i class="fab fa-discord"></i></a>
-      <a href="#" class="text-yellow-400 hover:text-yellow-500"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/kalaifc" class="text-yellow-400 hover:text-yellow-500"><i class="fab fa-x-twitter"></i></a>
     </div>
     <p class="mt-6 text-sm text-gray-500">Built with 💡 and ❤️ thanks to <a href="https://openai.com/chatgpt" target="_blank" class="underline hover:text-white">ChatGPT</a> & <a href="https://openai.com" target="_blank" class="underline hover:text-white">OpenAI</a>.</p>
   </footer>
